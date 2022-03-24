@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="soft-skills.css" rel="stylesheet" />
+    <title>CV Fighter</title>
+</head>
+<body id="bodysoftSkills"> 
+
+    <div class="fondunoir">
+
+        <div class="quit"><a href="index.html">Exit</a></div>
+      <div class="exitFleche"><a href="index.html"></a></div>
+
+        <h1 id="mainTitle">SOFT SKILLS</h1>
+
+                    <!--ACCORDEON-->
+
+        <div class="accordion">
+
+            <!--TEXTE 1-->
+            <div class="softskillstext">
+            <div class="softskillsTitle"><h2>DISCIPLINED</h2>
+              </div>
+            <div class="softskillsContent">
+    
+        <p>Je pratique mon entrainement sportif régulièrement.</p>
+
+            </div>
+            </div>
+
+
+            <!--TEXTE 2--> 
+            <div class="softskillstext">
+                <div class="softskillsTitle"><h2>COMPOSURE</h2></div>
+                <div class="softskillsContent">
+        
+            <p>Je sais faire preuve de sang-froid dans des situations stressantes.</p>
+    
+                </div>
+                </div>
+
+              <!--TEXTE 3--> 
+            <div class="softskillstext">
+                <div class="softskillsTitle"><h2>PERSEVERANCE</h2></div>
+                <div class="softskillsContent">
+        
+            <p>Malgré les obsctacles, je continuer à travailler pour atteindre mes objectifs.</p>
+    
+                </div>
+                </div>
+ <!--TEXTE 4--> 
+ <div class="softskillstext">
+    <div class="softskillsTitle"><h2>HUMBLE</h2></div>
+    <div class="softskillsContent">
+
+<p>Je respecte mes adversaires lors des tournois et fais preuve de courtoisie.</p>
+
+    </div>
+    </div>
+
+    <!--TEXTE 5--> 
+ <div class="softskillstext">
+    <div class="softskillsTitle"><h2>TAKING INITIATIVE</h2></div>
+    <div class="softskillsContent">
+
+<p>Autonome, je prends les décisions nécéssaires pour réussir mes missions .</p>
+
+    </div>
+    </div>
+        
+        </div>
+
+        <script>
+
+// --------------------------------JS------------------------------------//
+
+    const newPic= document.querySelectorAll(".softskillsContent");
+
+  for (let i=0; i < newPic.length; i++) {
+newPic[i].addEventListener("mouseover", function (event){
+    event.preventDefault(); /* evite que la page se recharge */
+    document.body.style.backgroundImage = "url('ryusoft.png')" ; 
+});
+  }
+
+  for (let i=0; i < newPic.length; i++) {
+newPic[i].addEventListener("mouseleave", function (event){
+    event.preventDefault(); /* evite que la page se recharge */
+    document.body.style.backgroundImage = "url('karatemaster.jpg')" ;
+   
+  });
+  }
+
+const accordion = document.getElementsByClassName("softskillstext");
+
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener("click", function () {
+        this.classList.toggle("active")
+        
+    })
+}
+
+        </script>
+
+    </body>
+    </html>
+
+
+    
