@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: street street-fighter-zero-3-arcade-1-0;
-    src: url(street-fighter-zero-3-arcade-1-0\ \(4\).ttf);
+    src: url("images/street-fighter-zero-3-arcade-1-0\ \(4\).ttf");
 }
 a:-webkit-any-link{
     color: var(--light);
@@ -24,7 +24,7 @@ body{
     margin: 0;
     padding: 0;
     background: linear-gradient(45deg, blue,red);
-    background-image: url("karatemaster.jpg");
+    background-image: url("images/karatemaster.jpg");
     background-size: cover; 
     width: 100%;
 }
@@ -159,7 +159,7 @@ body {
             padding: 0;
             display: grid;
             background: linear-gradient(40deg,black,rgba(255, 255, 255, 0));        
-            background-image: url("karatemaster.jpg");
+            background-image: url("images/karatemaster.jpg");
             background-size: cover; 
             width: 100%;
         }
