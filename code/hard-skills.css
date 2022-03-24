@@ -5,7 +5,7 @@
 /*---------------- mobile first ------------------------------*/
 
 @font-face {
-    font-family: street street-fighter-zero-3-arcade-1-0;
+    font-family: "street street-fighter-zero-3-arcade-1-0";
     src: url(street-fighter-zero-3-arcade-1-0\ \(4\).ttf);
 }
 
@@ -94,7 +94,7 @@ h2 {
 color: var(--light);
 font-size: var(--fontsizesmallmobile);
 padding: var(--spacing);
-font-family: street street-fighter-zero-3-arcade-1-0;
+font-family: "street street-fighter-zero-3-arcade-1-0";
 }
 
 h2:hover {
@@ -199,7 +199,7 @@ h1 {
     padding: var(--spacing2);
     margin-top: 1rem;
     margin-left: 2rem;
-    font-family: street street-fighter-zero-3-arcade-1-0;
+    font-family: "street street-fighter-zero-3-arcade-1-0";
     background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -210,7 +210,7 @@ h2 {
             margin: 0;
             padding: var(--spacing);
             font-size: var(--fontsizesmalldesktop);
-            font-family: street street-fighter-zero-3-arcade-1-0;
+            font-family: "street street-fighter-zero-3-arcade-1-0";
             color: var(--light);
         }
 
