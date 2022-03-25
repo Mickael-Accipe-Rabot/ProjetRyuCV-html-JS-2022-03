@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form.css" rel="stylesheet" />
+    <title>CV Fighter</title>
+</head>
+
+<body>
+
+  <div class="quit"><a href="index.html">Exit</a></div>
+  <div class="exitFleche"><a href="index.html"></a></div>
+
+    <h1 id="contactTitle"> Contact Ryu</h1>
+  
+      <section id="contact">
+        <form id="contactForm">
+          <label for="name">First name Last name:</label><br />
+          <input type="text" id="name" name="name" placeholder="First Name" /><br />
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@fighter.com"
+          /><br />
+          <label for="message">Message:</label><br />
+          <input type ="text" id="message" name="message" placeholder="Write your message"></input>
+          <br /><br />
+        </form>
+      </section>
+
+      <div id="submitdiv"> <audio src ="sonHadoken.mp3" class="sound"></audio>
+      <h2 id="submitTitle">Submit</h2> 
+    </div>
+
+    <div class="divGif">
+      <img src="images/ryugif2.gif" class="ryuGif" alt="Ryu" >
+    </div>
+
+    <script>
+//--------------------------------JS------------------------------------//
+
+      const animationSubmit = document.querySelector("#submitTitle");
+
+animationSubmit.addEventListener("click", function () {
+    const newDivGif = document.querySelector(".divGif");
+    newDivGif.classList.toggle("showme")
+});
+
+const press = document.querySelector('#submitTitle');
+const sound = new Audio();
+sound.src="audio/sonHadoken.mp3";
+press.addEventListener('click', ()=>{
+    sound.play();
+})
+
+    </script>
+
+</body>
+</html>

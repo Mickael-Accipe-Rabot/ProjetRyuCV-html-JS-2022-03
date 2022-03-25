@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="hard-skills.css" rel="stylesheet" />
+    <title>CV Fighter</title>
+</head>
+<body>
+        <div class="fondunoir">
+
+          <div class="quit"><a href="index.html">Exit</a></div>
+      <div class="exitFleche"><a href="index.html"></a></div>
+
+            <h1 id="mainTitle">HARD SKILLS</h1>
+    
+
+            <!--ACCORDEON-->
+
+            <div class="accordion">
+    
+                <!--TEXTE 1-->
+                <div class="hardskillstext">
+                <div class="hardskillsTitle"><h2>HADOKEN</h2></div>
+                <div class="hardskillsContent" id="pic1">
+        
+            <p>Le mouvement envoie une vague d'énergie concentrée par l'esprit (aussi appelée "ki") en direction des adversaires.</p>
+    
+                </div>
+                </div>
+    
+    
+                <!--TEXTE 2--> 
+                <div class="hardskillstext">
+                    <div class="hardskillsTitle"><h2>SHORYUKEN</h2></div>
+                    <div class="hardskillsContent"id="pic2" >
+            
+                <p>Un uppercut pendant lequel j'effectue une rotation à 360°.</p>
+        
+                    </div>
+                    </div>
+    
+                  <!--TEXTE 3--> 
+                <div class="hardskillstext">
+                    <div class="hardskillsTitle"><h2>TATSUMAKI</h2></div>
+                    <div class="hardskillsContent" id="pic3">
+            
+                <p>Cette attaque frappe 3 fois l'ennemi grâce à une rotation à 360°.</p>
+        
+                    </div>
+                    </div>
+     <!--TEXTE 4--> 
+     <div class="hardskillstext">
+        <div class="hardskillsTitle"><h2>KARATE MASTER</h2></div>
+        <div class="hardskillsContent" id="pic4">
+    
+    <p>Sport de combat d'origine japonaise, consistant à toucher l'adversaire, sans établir un corps à corps, grâce à des coups violents portés avec le tranchant de la main, le coude, le genou et le pied, dans des attaques circulaires ou directes.</p>
+    
+        </div>
+        </div>
+    
+        <!--TEXTE 5--> 
+     <div class="hardskillstext">
+        <div class="hardskillsTitle"><h2>JAPANESE BILINGUAL</h2></div>
+        <div class="hardskillsContent"id="pic5">
+    
+    <p>Pratique du japonais depuis 30ans. </p>
+    
+        </div>
+        </div>
+            
+            </div>
+    
+            <script>
+// --------------------------------JS------------------------------------//
+// CHANGEMENT PIC HADOKOKEN //
+
+const newPicA = document.querySelector("#pic1");
+
+newPicA.addEventListener("mouseover", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/ryu_hadoken.png')" ;
+});
+
+
+newPicA.addEventListener("mouseleave", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/karatemaster.jpg')" ;
+});
+
+// CHANGEMENT PIC SHORYUKEN //
+const newPicB = document.querySelector("#pic2");
+
+newPicB.addEventListener("mouseover", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/ryu_shoryoken.png')" ;
+});
+
+
+newPicB.addEventListener("mouseleave", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/karatemaster.jpg')";
+});
+
+// CHANGEMENT PIC TATSUMAKI //
+
+const newPicC = document.querySelector("#pic3");
+
+newPicC.addEventListener("mouseover", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/ryu_defense.png')" ;
+});
+
+
+newPicC.addEventListener("mouseleave", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/karatemaster.jpg')" ;
+});
+
+// CHANGEMENT PIC KARATE MASTER //
+
+const newPicD = document.querySelector("#pic4");
+
+newPicD.addEventListener("mouseover", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/ryu_pose_karate.png')" ;
+});
+
+
+newPicD.addEventListener("mouseleave", function (event){
+  event.preventDefault(); /* evite que la page se recharge */
+  document.body.style.backgroundImage = "url('images/karatemaster.jpg')";
+});
+
+
+// ACCORDION //
+
+const accordion2 = document.getElementsByClassName("hardskillstext");
+
+for (i = 0; i < accordion2.length; i++) {
+    accordion2[i].addEventListener("click", function () {
+        this.classList.toggle("active")
+    })
+}
+
+ </script>
+
+ </body>
+</html>

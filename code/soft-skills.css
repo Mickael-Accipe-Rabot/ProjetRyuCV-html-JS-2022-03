@@ -1,0 +1,257 @@
+
+/*-----------------SOFT SKILLS PAGE----------------------------*/
+
+
+
+/*---------------- mobile first ------------------------------*/
+
+@font-face {
+    font-family: street street-fighter-zero-3-arcade-1-0;
+    src: url("images/street-fighter-zero-3-arcade-1-0\ \(4\).ttf");
+}
+a:-webkit-any-link{
+    color: var(--light);
+    text-decoration: none;
+    font-family: 'street street-fighter-zero-3-arcade-1-0';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, blue,red);
+    background-image: url("images/karatemaster.jpg");
+    background-size: cover; 
+    width: 100%;
+}
+
+:root {
+    --primarycolor: yellow;
+    --secondarycolor: orange;
+    --dark: black;
+    --light: white;
+    --spacing:1rem;
+    --spacing2: 2rem;
+    --spacing3: 4rem;
+    --fontsizelargemobile: 35px;
+    --fontsizesmallmobile: 20px;
+    --fontsizelargedesktop: 50px;
+    --fontsizesmalldesktop: 25px;
+}
+
+#mainTitle
+{
+color: var(--light);
+font-size: var(--fontsizelargemobile);
+padding: 1rem;
+margin-top: 1rem;
+margin-left: 2rem;
+font-family: street street-fighter-zero-3-arcade-1-0;
+background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+}
+
+.quit {
+   visibility: hidden;
+}
+
+.fondunoir {
+    background: linear-gradient(90deg,black,rgba(255, 255, 255, 0));
+    height: 100vh;
+    width: 100%;
+}
+
+.accordion {
+display: flex;
+flex-direction: column;
+justify-content: center;
+width : 100%;
+gap: var(--spacing);
+}
+
+.accordion .softskillstext {
+position: relative;
+gap: var(--spacing);
+}
+
+.accordion .softskillstext .softskillsTitle {
+position: relative;
+width:100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+gap: var(--spacing);
+cursor: pointer;
+}
+
+h2{
+    padding: var(--spacing);
+    font-size: var(--fontsizesmallmobile);
+    font-family: street street-fighter-zero-3-arcade-1-0;
+    color: var(--light);
+    
+}
+
+h2:hover {
+    background: -webkit-linear-gradient(rgb(255, 0, 0),rgb(252, 178, 42));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+}
+
+.accordion .softskillstext .softskillsTitle::before {
+position : absolute;
+transform: translateY(-50%);
+font-size: 15px;
+}
+
+.accordion .softskillstext .softskillsContent {
+position: relative;
+height : 0;
+color: var(--light);
+overflow: hidden;
+transition: 0.5s;
+overflow-y: auto;
+}
+
+.accordion .softskillstext.active .softskillsContent {
+    height: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* -------------------DESKTOP VERSION------------------------------*/
+
+@media screen and (min-width: 1080px) {
+    
+:root {
+        --primarycolor: yellow;
+        --secondarycolor: orange;
+        --dark: black;
+        --light: white;
+        --spacing:1rem;
+        --spacing2: 2rem;
+        --spacing3: 4rem;
+        --fontsizelargemobile: 35px;
+        --fontsizesmallmobile: 20px;
+        --fontsizelargedesktop: 50px;
+        --fontsizesmalldesktop: 25px;
+    }
+
+a:-webkit-any-link{
+    color: var(--light);
+    text-decoration: none;
+    font-family: 'street street-fighter-zero-3-arcade-1-0';
+}
+
+body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            background: linear-gradient(40deg,black,rgba(255, 255, 255, 0));        
+            background-image: url("images/karatemaster.jpg");
+            background-size: cover; 
+            width: 100%;
+        }
+
+ .quit {
+            visibility: visible;
+            z-index: 2;
+            position: absolute;
+            right: 0;
+            margin: 2rem;
+            /* display: block; */
+            text-decoration: none;
+            color: white;
+          }
+          
+         
+.quit:hover {
+            transform: scale(1.8);
+            transition: 1000ms;
+            background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+          }
+
+.exitFleche:active {
+            transform: scale(1.3);
+            transition: 200ms;
+            background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(3px 3px 4px rgb(45, 73, 197)); }
+        
+    
+h1 {
+        color: var(--light);
+        font-size: var(--fontsizelargedesktop);
+        padding: var(--spacing2);
+        margin-top: 1rem;
+        margin-left: 2rem;
+        font-family: street street-fighter-zero-3-arcade-1-0;
+        background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+}
+
+    h2 {
+        margin: 0;
+        padding: var(--spacing);
+        font-size: var(--fontsizesmalldesktop);
+        font-family: street street-fighter-zero-3-arcade-1-0;
+        color: var(--light);
+    }
+
+    h2:hover {
+        background: -webkit-linear-gradient(rgb(255, 0, 0),rgb(252, 178, 42));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+        transform: scale(1.2);
+    }
+
+    .accordion {
+        gap: var(--spacing3)
+    }
+    
+    .accordion .softskillstext {
+        padding-left: 2rem;
+    }
+    
+    .accordion .softskillstext .softskillsTitle {
+                position: relative;
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: var(--spacing);
+                cursor: pointer;
+                }
+            
+    
+    .fondunoir {
+            background: linear-gradient(90deg,black,rgba(0, 0, 0, 0));
+            height: 100vh;
+            width: 50%;
+        }
+
+    }
+
+    .none {
+        display: none;
+    }
