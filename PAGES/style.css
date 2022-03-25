@@ -205,7 +205,7 @@ footer {
   .CVS {
     font-size: calc(var(--fontSizeSmall) * 8);
     transition: var(--transitionTimeShort) ease-in-out;
-    line-height: 6rem;
+    line-height: 9rem;
   }
   footer {
     position: relative;
