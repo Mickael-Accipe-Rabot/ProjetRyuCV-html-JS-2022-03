@@ -48,11 +48,11 @@ h1 {
 .menuWilders a,
 .selecth1,
 .wilderLiSelected,
-.hAbout {
+.hAbout,h3 {
   background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+  filter: drop-shadow(5px 3px 3px rgb(45, 73, 197));
 }
 /***********GRADIENT +420PX *****************/
 @media screen and (min-width: 1080px) {
@@ -70,6 +70,7 @@ h1 {
     filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
   }
 }
+/***************************************/
 .quit {
   display: none;
 }
@@ -95,6 +96,20 @@ a:visited {
   font-size: calc(var(--fontSizeSmall) * 3);
   font-family: 'PermanentMarker-Regular';
 }
+.insert{
+  grid-column: 1 /2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(45, 73, 197);
+  filter: drop-shadow(3px 3px 2px rgb(255, 255, 255));
+  font-size: var(--fontSizeLarge);
+  opacity:1;
+}
+.insertInvisible{
+  opacity : 0;
+}
 .press {
   grid-column: 1 /2;
   grid-row: 2/3;
@@ -104,7 +119,15 @@ a:visited {
   color: rgb(255, 255, 255);
   filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
   font-size: var(--fontSizeStandard);
+  opacity:0;
+  height:0;
+  transition: var(--transitionTimeShort) ease-in-out;
 }
+.pressVisible{
+  opacity:1;
+  height:100%;
+}
+
 /*---- TRANSITION BOUTON SMARTPHONE_CLICK pour l'index, les menus boutonExit ----*/
 .menuList li:active,
 .aWilders:active,
@@ -145,7 +168,40 @@ footer {
 .creditNumber {
   margin-left: var(--spacingSmall);
 }
+.btn{
+  font-size: 1.5rem;
+  color:rgb(153, 132, 10);
+  background: linear-gradient(30deg,rgb(255, 174, 00),rgb(255, 255, 255),rgb(255, 174, 00));
+  font-weight: bold;
+  /* background-color:  rgb(255, 213, 124); */
+  border:solid 4px rgb(153, 132, 10);
+  width:2rem;
+  height:2.5rem;
+  border-radius: 50%;
+  margin: .5rem;
+  position: absolute;
+  bottom: 2rem;
+  left:.5rem;
+  z-index: 2;
+  transition : var(--transitionTimeShort) ease-in-out
+}
 @media screen and (min-width: 1080px) {
+  .insert{
+    font-size: calc(var(--fontSizeLarge)*1.2);
+  }
+  .btn{
+    bottom:0;
+    height: 7rem;
+    width:7rem;
+    font-size: 5rem;
+    margin: 1rem;
+  }
+  .btn:hover{
+    scale:1.2;
+  }
+  .creditNumber {
+   font-size: var(--fontSizeStandard);
+  }
   .CVS {
     font-size: calc(var(--fontSizeSmall) * 8);
     transition: var(--transitionTimeShort) ease-in-out;
@@ -159,11 +215,11 @@ footer {
     transition: var(--transitionTimeShort) ease-in-out;
   }
   .accueil .press a:hover {
-    transform: scale(1.8);
+    transform: scale(1.3);
     transition: var(--transitionTimeStandard) ease-in-out;
   }
   /*---- HOVER pour les boutons index, menus, boutonExit ----*/
-  .accueil .press a:hover,
+  
   .menuList li:hover,
   .aWilders:hover,
   .exitFleche:hover {
@@ -171,7 +227,7 @@ footer {
     transition: var(--transitionTimeStandard) ease-in-out;
   } /*----*/
   .press a {
-    font-size: var(--fontSizeStandard);
+    font-size: calc(var(--fontSizeLarge)*1.2);
   }
   .exitFleche {
     display: none;
@@ -263,7 +319,7 @@ footer {
 .selectW {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: .5fr 5fr 5fr;
   position: relative;
   height: 100vh;
   background: linear-gradient(
@@ -280,8 +336,9 @@ footer {
   grid-row: 1/2;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: var(--spacingStandard);
+  height:auto;
 }
 .selecth1 h1 {
   text-align: center;
@@ -317,6 +374,11 @@ footer {
 .mikeTextToggle {
   margin: var(--spacingStandard);
 }
+.mikeTextToggle li{
+  background-color: aqua;
+  margin: 1rem;
+  font-size: var(--fontSizeLarge);
+}
 .ElisaJ1,
 .mikeJ2 {
   text-shadow: 3px 2px 3px rgb(62, 90, 250);
@@ -329,6 +391,7 @@ footer {
 }
 .mikeNameJ2,
 .elisaNameJ1 {
+  font-size: 2rem;
   margin: var(--spacingStandard);
   background: -webkit-linear-gradient(
     rgb(255, 174, 0),
@@ -376,8 +439,27 @@ footer {
   height: 0;
   width: 0;
 }
+.mikeTextToggle li,.ElisaTextToggle li{
+  background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+  margin: 1rem;
+  font-size: var(--fontSizeSmall);
+  padding: .5rem;
+  width:100%;
+  list-style-type: none;
+  color: rgb(15, 26, 77);
+  font-family: 'street-fighter-zero-3-arcade-1-0';
+}
 @media screen and (min-width: 1080px) {
+  .wildersImgM,
+.wildersImgE {
+  height: 6rem;
+  width:6rem;
+}
   .wilders {
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     gap: 8rem;
@@ -386,7 +468,7 @@ footer {
   .ElisaText.is-visibleE {
     width: 50vw;
     position: absolute;
-    top: 20%;
+    top: 5%;
     left: 50%;
     transition: opacity var(--transitionTimeStandard) ease-in-out,
       transform var(--transitionTimeStandard) ease-in-out;
@@ -396,17 +478,30 @@ footer {
   .mikeText.is-visibleM {
     width: 50vw;
     position: absolute;
-    top: 20%;
+    top: 5%;
     right: 50%;
     transition: opacity var(--transitionTimeStandard) ease-in-out,
       transform var(--transitionTimeStandard) ease-in-out;
     /* TRANSLATION DE L'AXE DES Y (ajouté à la transition donne l'effet de glissement) */
     transform: translateX(100%);
   }
+  .mikeTextToggle li,.ElisaTextToggle li{
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 238, 0));
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
+    margin: 1rem;
+    font-size: var(--fontSizeStandard);
+    padding: .5rem;
+    width:100%;
+    list-style-type: none;
+    color: rgb(15, 26, 77);
+    font-family: 'street-fighter-zero-3-arcade-1-0';
+  }
   .ElisaImgToggle {
     position: absolute;
     bottom: 0;
-    right: -10%;
+    right: -15%;
     height: 0;
     width: auto;
     opacity: 0;
@@ -417,7 +512,7 @@ footer {
   .ElisaImgToggle.is-visibleE {
     opacity: 1;
     visibility: visible;
-    height: 100vh;
+    height: 130vh;
     width: auto;
     transform: translateX(-30%);
   }
@@ -435,24 +530,26 @@ footer {
   .mikeImgToggle.is-visibleM {
     opacity: 1;
     visibility: visible;
-    height: 100vh;
+    height: 110vh;
     width: auto;
     transform: translateX(30%);
   }
   .wilder:hover {
     scale: 1.8;
   }
+  .wilder{
+    margin:1rem;
+  }
 }
 
 /* ----------------- About --------------*/
 .bodyAbout {
+  background-image: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: rgb(255, 255, 255);
-  background-color: rgb(53, 67, 148);
+  background-color: rgb(8, 7, 26);
   height: 100%;
-  /* background-image: url('images/ryu about.png');
-background-size: 100vw 100vh; */
 }
 .hAbout {
   grid-column: 1/3;
@@ -467,20 +564,19 @@ background-size: 100vw 100vh; */
 }
 .hFormations {
   font-size: var(--fontSizeSmall);
-  margin: var(--spacingStandard);
+  margin: calc(var(--spacingStandard)*3);
+  font-size: var(--fontSizeStandard);
+  text-shadow:4px 3px 3px black;
 }
 .firstSectionAbout {
   grid-column: 1/3;
   grid-row: 2/3;
-  /* background-image: url('images/ryu about.png'); */
-  /* background-size: 100% 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 .descriptionAbout {
-  background-color: rgba(0, 0, 0, 0.377);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -493,12 +589,9 @@ background-size: 100vw 100vh; */
   overflow-wrap: break-word;
   margin: var(--spacingStandard);
   overflow: auto;
+  text-shadow:4px 3px 3px black;
 }
-.cliquezPas {
-  font-weight: bold;
-  overflow: none;
-  padding:var(--spacingSmall);
-}
+
 .sectionFormations {
   grid-column: 1/3;
   grid-row: 3/4;
@@ -506,13 +599,10 @@ background-size: 100vw 100vh; */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   gap: 1rem;
   background-image: url('../images/dojo(1).jpg');
   background-size: 100% 100%;
-}
-.hFormations {
-  font-size: var(--fontSizeStandard);
 }
 .formations {
   height:auto;
@@ -520,11 +610,7 @@ background-size: 100vw 100vh; */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.452);
   padding: 1.5rem;
-}
-.formations-evil {
-  background-image: url('../images/ryu darkmode.png');
 }
 .formationsItems {
   display: flex;
@@ -569,25 +655,44 @@ background-size: 100vw 100vh; */
 .dojo:hover,
 .tournoi:hover,
 .vagabond:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   transition: var(--transitionTimeStandard);
 }
 .tournoi-down p,
 .vagabond-down p,
 .dojo-down p {
   background-color: rgba(0, 0, 0, 0.219);
+  text-shadow:4px 3px 3px black;
 }
-/*************************************************************/
+.switch,.content,.cliquezPas{
+  display: none;
+}
+.boldDesc{
+  font-weight: bold;
+}
+.infos,.vie{
+  list-style-type: none;
+}
+/***************************DESKTOP ABOUT**********************************/
 
 @media screen and (min-width: 1080px) {
+  .switch,.content,.cliquezPas{
+    display: block;
+  }
+  .cliquezPas {
+    font-weight: bold;
+    overflow: none;
+    padding:var(--spacingSmall);
+    margin: 0;
+  }
   .bodyAbout {
-    height: 100vh;
-    background-image: url('../images/ryu abuout desktop.png');
-    background-size: 100%;
-    background-size: contain;
-    background-size: 100% 100%;
+    background-image: url('../images/ryuAbout.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 70%;
     grid-template-rows: 0.5fr 5fr 5fr;
-    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(8, 7, 26);
   }
   .hAbout {
     grid-column: 1/3;
@@ -597,7 +702,6 @@ background-size: 100vw 100vh; */
     grid-column: 2/3;
     grid-row: 2/4;
     background-image: none;
-    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -605,29 +709,32 @@ background-size: 100vw 100vh; */
   .descriptionAbout {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height:70%;
-    margin: var(--spacingStandard);
+    margin: 6rem 4rem 6rem 4rem;
     overflow: auto;
   }
   .vie{
+    margin: 2rem 0 0 0;
     height:auto;
     overflow:auto;
   }
+  
   .sectionFormations {
     background-image: none;
     grid-column: 1/2;
     grid-row: 2/4;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: .2fr 5fr;
     height: auto;
   }
   .formations {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row: 1fr 5fr;
+    grid-row: .2fr 5fr;
     padding: 0;
     margin: var(--spacingStandard);
-    height: 100vh;
+    height:100%;
     gap: 1rem;
   }
   .hFormations {
@@ -636,6 +743,12 @@ background-size: 100vw 100vh; */
     align-items: center;
     grid-column: 1/4;
     grid-row: 1/2;
+    height:100%;
+    margin:0;
+  }
+  .formationsItems{
+    height:100%;
+    justify-content: start;
   }
   .dojo {
     grid-column: 1/2;
@@ -670,6 +783,7 @@ background-size: 100vw 100vh; */
   .dojo-down,
   .tournoi-down,
   .vagabond-down {
+    height:100;
     opacity: 0;
     visibility: hidden;
     margin: var(--spacingSmall);
@@ -677,9 +791,11 @@ background-size: 100vw 100vh; */
   .dojo-down.visible,
   .tournoi-down.visible,
   .vagabond-down.visible {
+    height:100%;
     opacity: 1;
     visibility: visible;
     margin: var(--spacingSmall);
+    justify-content: start;
   }
   .dojo h3,
   .tournoi h3,
@@ -689,13 +805,13 @@ background-size: 100vw 100vh; */
   .dojo:hover,
   .tournoi:hover,
   .vagabond:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
     transition: var(--transitionTimeStandard);
   }
   .tournoi-down p,
   .vagabond-down p,
   .dojo-down p {
-    margin: var(--spacingStandard);
+    margin: 4px;
     padding: var(--spacingStandard);
     background-color: rgba(0, 0, 0, 0.219);
   }
@@ -730,7 +846,7 @@ background-size: 100vw 100vh; */
 }
 
 .bodyAbout-white {
-  background-image: url('../images/ryu darkmode.png');
+  background-image: url('../images/ryu darkmode desktop.png');
   background-size: 100% 100%;
 }
 .cursor-white {
@@ -751,9 +867,13 @@ background-size: 100vw 100vh; */
   .quit {
     z-index: 2;
     position: absolute;
-    margin: calc(var(--spacingStandard)*1.5);
+    right:0;
+    margin: calc(var(--spacingStandard)*2);
     display: block;
     font-family: 'street-fighter-zero-3-arcade-1-0';
+  }
+  .quit a{
+    margin:1rem;
   }
   .quit:hover {
     transform: scale(1.8);

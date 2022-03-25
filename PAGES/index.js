@@ -15,25 +15,58 @@ window.addEventListener("load", function() {
         b.style.opacity = (b.style.opacity == '0' ? '' : '0');
     }, 500);
 }, false);
+
+window.addEventListener("load", function() {
+    var b = document.querySelector('.insert');
+    setInterval(function() {
+        b.style.opacity = (b.style.opacity == '0' ? '' : '0');
+    }, 500);
+}, false);
+/*************Coin count*************/
+const press = document.querySelector('.press a');
+const preSS =document.querySelector('.press');
+const insert = document.querySelector('.insert');
+
+const coinSound = new Audio();
+coinSound.src="../sons/coinSound.mp3";
+const coin = document.querySelector('.creditNumber');
+const btn = document.querySelector('.btn');
+const count = () =>{
+    coin.innerHTML++;
+    coinSound.play();
+    preSS.classList.add('pressVisible');
+    insert.classList.add('insertInvisible');
+}
+btn.addEventListener('click',count);
+
+
+
+// coin.innerHTML= z;
+// console.log(z);
+// btn.addEventListener('click', ()=>{
+//     return z = z + 1;
+// })
+// // coin.appendChild(z);
+
 /************************************/ 
 
 /****** HOVER PRESS SOUND ***********/
-const press = document.querySelector('.press a');
-const sound = new Audio();
-sound.src="../sons/startSound.mp3";
+
+const startSound = new Audio();
+startSound.src="../sons/startSound2.mp3";
 
 press.addEventListener('mouseover', ()=>{
-    sound.play();
+    startSound.play();
 });
 press.addEventListener('mouseleave', ()=>{
-    sound.pause();
+    startSound.pause();
 })
 /************************************/
 
 /***********FADE OUT ****************/
 const CVS = document.querySelector('.CVS')
 const footer = document.querySelector('footer');
-const m = [CVS, footer];
+const m = [CVS, footer,btn];
 press.addEventListener('mouseover', ()=>{
     m.forEach(element => {element.style.opacity='0';})
     });
