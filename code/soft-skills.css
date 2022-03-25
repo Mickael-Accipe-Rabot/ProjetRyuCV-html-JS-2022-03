@@ -105,6 +105,7 @@ h2:hover {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(3px 3px 4px rgb(45, 73, 197));
     transform: scale(1.1);
+    transition: 1s ease-in-out;
 }
 
 .accordion .softskillstext .softskillsTitle::before {
