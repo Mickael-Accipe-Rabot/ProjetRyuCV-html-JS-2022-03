@@ -134,7 +134,7 @@ a:visited {
 .accueil .press a:active,
 .exitFleche:active {
   transform: scale(1.3);
-  transition: calc(var(--transitionTimeShort) / 2) ease-in-out;
+  transition: calc(var(--transitionTimeStandard) / 2) ease-in-out;
 } /*-------------*/
 .CV,
 .CV2 {
@@ -191,9 +191,9 @@ footer {
   }
   .btn{
     bottom:0;
-    height: 7rem;
-    width:7rem;
-    font-size: 5rem;
+    height: 5rem;
+    width:5rem;
+    font-size: 4rem;
     margin: 1rem;
   }
   .btn:hover{
@@ -205,6 +205,7 @@ footer {
   .CVS {
     font-size: calc(var(--fontSizeSmall) * 8);
     transition: var(--transitionTimeShort) ease-in-out;
+    line-height: 6rem;
   }
   footer {
     position: relative;
@@ -236,7 +237,7 @@ footer {
   }
   .menuList li a,
   .aWilders {
-    transition: var(--transitionTimeShort) ease-in-out;
+    transition: var(--transitionTimeStandard) ease-in-out;
   }
 }
 /* ------------------------- MENU -------------------------*/
@@ -429,7 +430,7 @@ footer {
   width: 4rem;
   border-radius: 9px;
   transition: all var(--transitionTimeShort) ease-in-out;
-  border: solid 4px blue;
+  border: solid 8px rgb(110, 149, 255);
 }
 .wilderImgSelected {
   border-color: red;
@@ -532,7 +533,7 @@ footer {
     visibility: visible;
     height: 110vh;
     width: auto;
-    transform: translateX(30%);
+    transform: translateX(25%);
   }
   .wilder:hover {
     scale: 1.8;
